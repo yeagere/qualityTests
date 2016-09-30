@@ -1,0 +1,77 @@
+<TESTSCONFIGURATION>
+
+<!-- Tests for *emtfChamber hot  -->
+
+    <QTEST name="NoisyChannel_Chamber_Hot">
+	<TYPE>NoisyChannel</TYPE>	
+	<PARAM name="tolerance">2</PARAM>
+	<PARAM name="neighboursX">36</PARAM>
+	<PARAM name="neighboursY">120</PARAM>
+	<PARAM name="error">0.50</PARAM>
+	<PARAM name="warning">0.70</PARAM>
+    </QTEST>
+
+    <LINK name="*emtfChamberStrip_QT_hot*">
+        <TestName activate="true">NoisyChannel_Chamber_Hot</TestName>
+    </LINK>
+
+<!-- Tests for *emtfChamber dead  -->
+
+-    <QTEST name="NoisyChannel_Chamber_Dead">
+	<TYPE>NoisyChannel</TYPE>	
+	<PARAM name="tolerance">2</PARAM>
+	<PARAM name="neighboursX">36</PARAM>
+	<PARAM name="neighboursY">0</PARAM>
+	<PARAM name="error">0.50</PARAM>
+	<PARAM name="warning">0.70</PARAM>
+    </QTEST>
+
+    <LINK name="*emtfChamberStrip_QT_dead*">
+        <TestName activate="true">NoisyChannel_Chamber_Dead</TestName> 
+    </LINK> 
+
+<!-- Tests for emtfErrors  -->
+
+    <QTEST name="XRange_Errors">
+	<TYPE>ContentsXRange</TYPE>	
+	<PARAM name="xmin">0</PARAM>
+	<PARAM name="xmax">0</PARAM>
+	<PARAM name="error">1</PARAM>
+	<PARAM name="warning">1</PARAM>
+    </QTEST>
+
+    <LINK name="*emtfErrors">
+	<TestName activate="true">XRange_Errors</TestName>
+    </LINK> 
+
+<!-- Tests for emtfTrackBXQT  -->
+
+    <QTEST name="NoisyChannel_TrackBX">
+	<TYPE>NoisyChannel</TYPE>	
+	<PARAM name="tolerance">2</PARAM>
+	<PARAM name="neighboursX">12</PARAM>
+	<PARAM name="neighboursY">0</PARAM>
+	<PARAM name="error">0.50</PARAM>
+	<PARAM name="warning">0.70</PARAM>
+    </QTEST>
+
+    <LINK name="*emtfTrackBX*">
+        <TestName activate="true">NoisyChannel_TrackBX</TestName>
+    </LINK>  
+
+<!--Tests for emtfTrackPhiQT  -->
+
+    <QTEST name="NoisyChannel_TrackPhi">
+	<TYPE>NoisyChannel</TYPE>	
+	<PARAM name="tolerance">2</PARAM>
+	<PARAM name="neighboursX">128</PARAM>
+	<PARAM name="neighboursY">0</PARAM>
+	<PARAM name="error">0.50</PARAM>
+	<PARAM name="warning">0.70</PARAM>
+    </QTEST>
+
+    <LINK name="*emtfTrackPhi*">
+        <TestName activate="true">NoisyChannel_TrackPhi</TestName>
+    </LINK> 
+
+</TESTSCONFIGURATION>
